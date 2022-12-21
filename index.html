@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Welcome | PG Life</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/home.css" />
+
+</head>
+<body>
+
+	<div class="header sticky-top">
+		<nav class="navbar navbar-expand-md navbar-light bg-light">
+			<a class="navbar-brand" href="index.html">
+				<img src="img/img/logo.png"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-navbar">
+				<span class="navbar-toggler-icon">
+				</span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-end" id="my-navbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signup-modal">
+							<i class="fas fa-user"></i>Signup
+						</a>
+					</li>
+					<div class="nav-vl"></div>
+					<li class="nav-item">
+						<a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#login-modal">
+							<i class="fas fa-sign-in-alt"></i>Login
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div id="loading">
+	</div>
+
+	<!-- Signup modal-->
+	<div class="modal fade" id="signup-modal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!-- modal header-->
+				<div class="modal-header">
+					<h5 class="modal-title">Signup with PGLife</h5>
+					<button type="button" class="btn-close" data-bs-toggle="modal" data-bs-dismiss="modal"></button>
+				</div>
+				<!-- modal body-->
+				<div class="modal-body">
+					<form class="form" action="registration.php" method="POST">
+						<div class="input-group form-group mb-3 mt3">
+							<span class="input-group-text">
+								<i class="fas fa-user"></i>
+							</span>
+							<input type="text" name="name" class="form-control" placeholder="Full name" required>
+						</div>
+						<div class="input-group form-group mb-3">
+							<span class="input-group-text">
+								<i class="fas fa-phone-alt"></i>
+							</span>
+							<input type="number" name="phone_number" class="form-control" placeholder="Phone number" required>
+						</div>
+						<div class="input-group form-group mb-3">
+							<span class="input-group-text">
+								<i class="fas fa-envelope"></i>
+							</span>
+							<input type="email" name="email" class="form-control" placeholder="Email" required>
+						</div>
+						<div class="input-group form-group mb-3">
+							<span class="input-group-text">
+								<i class="fa fa-lock"></i>
+							</span>
+							<input type="password" name="passwrd" class="form-control" placeholder="Password" required>
+						</div>
+						<div class="input-group form-group mb-3">
+							<span class="input-group-text">
+								<i class="fas fa-university"></i>
+							</span>
+							<input type="text" name="college" class="form-control" placeholder="College name" required>
+						</div>
+						<div class="form-group mb-3">
+							<span>I,m a </span>
+							<input type="radio" name="gender" value="male" class="ms-3">
+							<label>Male</label>
+							<input type="radio" name="gender" value="female" class="ms-3">
+							<label>Female</label>
+						</div>
+						<div class="mb-3">
+							<button type="submit" name="sbutton" class="btn btn-info form-control" >Create Account</button>
+						</div>
+						<!-- modal footer-->
+						<div class="modal-footer">
+							<span>
+								Already have an account?
+								<a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Login modal-->
+	<div class="modal fade mt-5" id="login-modal">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!-- modal header-->
+				<div class="modal-header">
+					<h5 class="modal-title">Login with PGLife</h5>
+					<button type="button" class="btn-close" data-bs-toggle="modal" data-bs-dismiss="modal"></button>
+				</div>
+				<!-- modal body-->
+				<div class="modal-body">
+					<form class="form" action="login.php" method="POST">
+						<div class="input-group form-group mb-3 mt3">
+							<span class="input-group-text">
+								<i class="fas fa-user"></i>
+							</span>
+							<input type="email" name="email" class="form-control" placeholder="Email" required>
+						</div>
+						<div class="input-group form-group mb-3">
+							<span class="input-group-text">
+								<i class="fas fa-lock"></i>
+							</span>
+							<input type="password" name="passwrd" class="form-control" placeholder="Password" required>
+						</div>
+						<div>
+							<button type="submit" name="lsbutton" class="btn btn-info form-control mb-3">Login</button>
+						</div>
+						<!-- modal footer-->
+						<div class="modal-footer">
+							<span>
+								<a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signup-modal">Click here </a>
+								to register a new account
+							</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner-container">
+		<h2 class="white pb-3">
+		Happiness per Square Foot
+	    </h2>
+
+
+	    <form id="search-form">
+	    	<div class="input-group city-search">
+	    		<input type="text" name="city" class="form-control input city" id="city" placeholder="Enter your city to search for PGs" />
+	    		<div class="input-group-apped">
+	    			<button type="submit" class="btn btn-secondary">
+	    				<i class="fa fa-search"></i>
+	    			</button>
+	    		</div>
+	    	</div>
+	    </form>
+	</div>
+
+	<div class="page-container">
+		<h1 class="city-heading">
+			Major Cities
+		</h1>
+		<div class="row">
+			<div class="city-card-container col-md">
+				<a href="property_list.html">
+					<div class="city-card rounded-circle">
+						<img src="img/img/delhi.png" class="city-img" />
+					</div>
+				</a>
+			</div>
+			<div class="city-card-container col-md">
+				<a href="property_list.html">
+					<div class="city-card rounded-circle">
+						<img src="img/img/mumbai.png" class="city-img" />
+					</div>
+				</a>
+			</div>
+
+			<div class="city-card-container col-md">
+				<a href="property_list.html">
+					<div class="city-card rounded-circle">
+						<img src="img/img/bangalore.png" class="city-img">
+					</div>
+				</a>
+			</div>
+
+			<div class="city-card-container col-md">
+				<a href="property_list.html">
+					<div class="city-card rounded-circle">
+						<img src="img/img/hyderabad.png" class="city-img">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="page-container footer-container">
+			<div class="footer-cities">
+				<div class="footer-city">
+					<a href="property_list.html">PG in Delhi</a>
+				</div>
+				<div class="footer-city">
+					<a href="property_list.html">PG in Mumbai</a>
+				</div>
+				<div class="footer-city">
+					<a href="property_list.html">PG in Bangalore</a>
+				</div>
+				<div class="footer-city">
+					<a href="property_list.html">PG in Hyderabad</a>
+				</div>
+			</div>
+
+			<div class="footer-copyright">
+				@ 2020 Copyright PG Life
+			</div>
+		</div>
+	</div>
+
+	<!--<script type="text/javascript" src="js/jquery.js"></script>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+	
+</body>
+</html>
